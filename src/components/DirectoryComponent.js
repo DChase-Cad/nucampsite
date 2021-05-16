@@ -5,22 +5,16 @@ import CampsiteInfoComponent from './CampsiteInfoComponent';
 
 class Directory extends Component {
     constructor(props) {
-        super(props);
-        this.state = {
-            selectedCampsite: null
-        };
-    }
+        super(props);}
 
-    onCampsiteSelect(campsite) {
-        this.setState({ selectedCampsite: campsite });
 
-    }
+
 
     render() {
         const directory = this.props.campsites.map(campsite => {
             return (
                 <div key={campsite.id} className="col-md-5 m1">
-                    <Card className="" onClick={() => this.onCampsiteSelect(campsite)}>
+                    <Card className="m-2" onClick={() => this.props.onClick(campsite.id)}>
                         <CardImg width="100%" top className="rounded" src={campsite.image} alt={campsite.name} />
                         <CardImgOverlay>
                             <CardTitle>{campsite.name}</CardTitle>
@@ -36,7 +30,7 @@ class Directory extends Component {
                 <div className="row">
                     {directory}
                 </div>
-                <CampsiteInfoComponent campsite={this.state.selectedCampsite} />
+                <CampsiteInfoComponent campsite={this.props.selectedCampsite} />
             </div>
         );
     }

@@ -4,8 +4,8 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 
 
-function renderCampsite(campsite) {
-
+function RenderCampsite({ campsite }) {
+    console.log(campsite.image);
     return (
         <div className="col-md-5">
             <Card>
@@ -21,7 +21,7 @@ function renderCampsite(campsite) {
 
 
 
-function renderComments(comments) {
+function RenderComments({ comments }) {
     if (comments) {
         return (
             <div className="col-md-5 m-1">
@@ -39,19 +39,17 @@ function renderComments(comments) {
     return <div />
 }
 
-function CampsiteInfo(props){
-
+function CampsiteInfo(props) {
     if (props.campsite) {
         return (
             <div className="container">
                 <div className='row'>
-                    {renderCampsite(props.campsite)}
-                    {renderComments(props.campsite.comments)}
+                    <RenderCampsite campsite={props.campsite} />
+                    <RenderComments comments={props.comments} />
                 </div>
             </div>
         );
     }
-
     return <div />;
 }
 

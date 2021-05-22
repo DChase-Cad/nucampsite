@@ -6,6 +6,7 @@ import Home from './HomeComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { CAMPSITES } from '../shared/campsites';
 import CampsiteInfo from './CampsiteInfoComponent';
+import Aboutus from './AboutComponent';
 import Contact from './ContactComponent';
 import { COMMENTS } from '../shared/comments';
 import { PARTNERS } from '../shared/partners';
@@ -53,10 +54,10 @@ class Main extends Component {
                     <Route exact path='/directory' render={() => <Directory campsites={this.state.campsites} />} />
                     <Route exact path='/contactus' component={Contact} />
                     <Route path='/directory/:campsiteId' component={CampsiteWithId} />
+                    <Route exact path='/aboutus' render ={()=> <Aboutus partners={this.state.partners}/>} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />
-
             </div>
         );
     }

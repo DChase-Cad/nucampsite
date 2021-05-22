@@ -12,7 +12,7 @@ export const CAMPSITES = [
         name:"Chrome River Campground ",
         image: "/assets/images/chrome-river.jpg",
         elevation: 877,
-        featured: false,
+        featured: true,
         description: "Spend a few sunny days and starry nights beneath a canopy of old-growth firs at this enchanting spot by the Chrome River."
     },
     {
@@ -28,7 +28,7 @@ export const CAMPSITES = [
         name:"Redux Woods Campground",
         image: "/assets/images/redux-woods.jpg",
         elevation: 42,
-        featured: true,
+        featured: false,
         description: "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
     }
 ];

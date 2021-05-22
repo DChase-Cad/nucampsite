@@ -15,8 +15,8 @@ function RenderCard({item}){
 
 function Home (props) {
     return(
-        <div className="container">
-            <div className="row">
+        <div className="container content mt-5">
+            <div className="row align-items-center">
                 <div className="col-md m-1">
                     <RenderCard item={props.campsite} />
                 </div>

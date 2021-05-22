@@ -27,7 +27,7 @@ function Directory(props) {
     });
 
     return (
-        <div className="container">
+        <div className="container content">
             <div className="row">
                 <div className="col">
                     <Breadcrumb>

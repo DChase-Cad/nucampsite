@@ -32,7 +32,7 @@ function RenderComments({ comments }) {
                             --{comments.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(comments.date)))}</p>
                     </div>
 
-                )};
+                )}
             </div>
         )
     }
@@ -42,7 +42,7 @@ function RenderComments({ comments }) {
 function CampsiteInfo(props) {
     if (props.campsite) {
         return (
-            <div className="container">
+            <div className="container content">
                 <div className="row">
                     <div className="col">
                         <Breadcrumb>

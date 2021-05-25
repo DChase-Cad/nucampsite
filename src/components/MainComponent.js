@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import Header from './HeaderComponent';
-import Directory from './DirectoryComponent';
-import Footer from './FooterComponent';
-import Home from './HomeComponent';
-import { Switch, Route, Redirect, withRouter} from 'react-router-dom';
-import CampsiteInfo from './CampsiteInfoComponent';
 import Aboutus from './AboutComponent';
-import Contact from './ContactComponent';
+import CampsiteInfo from './CampsiteInfoComponent';
 import {connect} from 'react-redux';
+import Contact from './ContactComponent';
+import Directory from './DirectoryComponent';
+import Header from './HeaderComponent';
+import Home from './HomeComponent';
+import Footer from './FooterComponent';
+import React, { Component } from 'react';
+import { Switch, Route, Redirect, withRouter} from 'react-router-dom';
 
+//making props for Main from the state data
 const mapStateToProps = state =>{
     return{
         campsites:state.campsites,
@@ -19,9 +20,6 @@ const mapStateToProps = state =>{
 }
 
 class Main extends Component {
-
-
-
 
     render() {
 
@@ -61,4 +59,5 @@ class Main extends Component {
     }
 }
 
+//connecting state from store to main via props and using withRouter to keep router functionality from react-router-dom
 export default withRouter(connect(mapStateToProps)(Main));

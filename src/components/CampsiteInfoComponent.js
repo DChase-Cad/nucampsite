@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom';
 
 
 function RenderCampsite({ campsite }) {
-    console.log(campsite.image);
     return (
         <div className="col-md-5">
             <Card>

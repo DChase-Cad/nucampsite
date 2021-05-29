@@ -1,21 +1,21 @@
 import Aboutus from './AboutComponent';
 import CampsiteInfo from './CampsiteInfoComponent';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import Contact from './ContactComponent';
 import Directory from './DirectoryComponent';
 import Header from './HeaderComponent';
 import Home from './HomeComponent';
 import Footer from './FooterComponent';
 import React, { Component } from 'react';
-import { Switch, Route, Redirect, withRouter} from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 
 //making props for Main from the state data
-const mapStateToProps = state =>{
-    return{
-        campsites:state.campsites,
-        comments:state.comments,
-        partners:state.partners,
-        promotions:state.promotions
+const mapStateToProps = state => {
+    return {
+        campsites: state.campsites,
+        comments: state.comments,
+        partners: state.partners,
+        promotions: state.promotions
     }
 }
 
@@ -50,7 +50,7 @@ class Main extends Component {
                     <Route exact path='/directory' render={() => <Directory campsites={this.props.campsites} />} />
                     <Route exact path='/contactus' component={Contact} />
                     <Route path='/directory/:campsiteId' component={CampsiteWithId} />
-                    <Route exact path='/aboutus' render ={()=> <Aboutus partners={this.props.partners}/>} />
+                    <Route exact path='/aboutus' render={() => <Aboutus partners={this.props.partners} />} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />

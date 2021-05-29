@@ -2,6 +2,20 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+const  RenderPartner= ({ partner }) =>{
+    if (partner) {
+        return (
+            <>
+                <Media object src={partner.image} alt={partner.name} width="150" />
+                <Media body className="ml-5 mb-4">
+                    <Media heading>{partner.name}</Media>
+                    {partner.description}
+                </Media>
+            </>
+        );
+    }
+    return <div />;
+}
 
 function About(props) {
 
@@ -13,20 +27,6 @@ function About(props) {
         );
     });
 
-    function RenderPartner({ partner }) {
-        if (partner) {
-            return (
-                <>
-                    <Media object src={partner.image} alt={partner.name} width="150" />
-                    <Media body className="ml-5 mb-4">
-                        <Media heading>{partner.name}</Media>
-                        {partner.description}
-                    </Media>
-                </>
-            );
-        }
-        return <div />;
-    }
 
     return (
         <div className="container">

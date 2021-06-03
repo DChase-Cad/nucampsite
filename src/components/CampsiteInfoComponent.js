@@ -13,12 +13,12 @@ class CommentForm extends Component {
 
         //initializing state with the ids of the form fields and modal toggling, touched for validation on firstName
         this.state = {
-            firstName: '',
+            author: '',
             rating: '',
             text: '',
             isModalOpen: false,
             touched: {
-                firstName: false
+                author: false
             },
         }
         this.toggleModal = this.toggleModal.bind(this);

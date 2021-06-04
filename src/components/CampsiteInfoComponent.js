@@ -164,7 +164,7 @@ function CampsiteInfo(props) {
 
     if(props.errMess){
         return(
-            <div className="conteiner">
+            <div className="container">
                 <div className="row">
                     <div className="col">
                         <h4>{props.errMess}</h4>
